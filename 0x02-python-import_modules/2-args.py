@@ -2,7 +2,12 @@
 if __name__ == "__main__":
     import sys
 
-n = len(sys.argv)
-print("{} arguements:".format(n - 1))
-for i in range(1, n):
-    print("{}: {} ".format(i, sys.argv[i]))
+args_count = len(sys.argv) - 1
+if args_count == 0:
+    print("0 arguments.")
+elif args_count == 1:
+    print("1 argument:")
+else:
+    print("{} arguments:".format(args_count))
+for i in range(args_count):
+    print("{}: {}".format(i + 1, sys.argv[i + 1]))
