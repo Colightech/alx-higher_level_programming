@@ -48,7 +48,7 @@ int is_palindrome(listint_t **head)
 	}
 
 	tmp = *head;
-	for (x = 0; x < size / 2; x++)
+	for (x = 0; x < (size / 2) - 1; x++)
 		tmp = tmp->next;
 
 	if ((size % 2) == 0 && tmp->n != tmp->next->n)
