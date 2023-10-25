@@ -6,10 +6,12 @@ class Square:
     def __init__(self, size=0):
         self.__size = size
 
+    """retriev the size of the square"""
     @property
     def size(self):
         return self.__size
-
+    
+    """set the size of the square"""
     @size.setter
     def size(self, value):
         if not isinstance(value, (int, float)):
@@ -17,9 +19,10 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
+    
+    """ returns the current square area"""
     def area(self):
-        return self.__size ** 2
+        return self.__size * self.__size
 
     def __eq__(self, other):
         if isinstance(other, Square):
