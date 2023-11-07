@@ -4,6 +4,6 @@
 
 def read_file(filename=""):
     """the method that read the text file"""
-    with open('my_file_0.txt', 'r') as rf:
+    with open(filename, encoding="utf-8") as rf:
         for line in rf:
             print(line, end="")
