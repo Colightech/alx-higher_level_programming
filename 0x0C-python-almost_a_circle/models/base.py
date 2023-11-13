@@ -2,7 +2,6 @@
 """a module for a new class base"""
 
 
-
 class Base:
     """the base class for other class in this project"""
 
@@ -11,7 +10,7 @@ class Base:
     def __init__(self, id=None):
         """the init method for the base class"""
 
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1

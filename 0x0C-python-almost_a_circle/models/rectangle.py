@@ -13,7 +13,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """this method get the attibute"""
@@ -58,6 +58,7 @@ class Rectangle(Base):
     def y(self):
         """this method get the attribute y"""
         return (self.__y)
+
     @y.setter
     def y(self, value):
         """this methoe set the attribute y"""
@@ -110,7 +111,6 @@ class Rectangle(Base):
             if "y" in kwargs:
                 self.y = kwargs["y"]
 
-    
     def to_dictionary(self):
         """Return the dictionary representation of a Rectangle."""
         return {
