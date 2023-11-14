@@ -20,7 +20,20 @@ class Base:
     def to_json_string(list_dictionaries):
         """A static method that return JSON string representation
         of a dictionary"""
-        if len(list_dictionaries) is None or len(list_dictionaries) == "":
+        if list_dictionaries is None or len(list_dictionaries) == "":
             return ("[]")
         else:
             return (json.dumps(list_dictionaries))
+
+    def save_to_file(cls, list_objs):
+        """this method write the json string representation to a file"""
+        with open("Rectangle.json", 'w') as wf:
+            json_str = to_json_string(json.dump(cls, list_objs))
+            wf.write(json_str)
+
+    def from_json_string(json_string):
+        """this static method returns list of json string"""
+        if json_string is None or len(json_string) == 0:
+            return ("[]")
+        else:
+            return (json.loads(json_string))
