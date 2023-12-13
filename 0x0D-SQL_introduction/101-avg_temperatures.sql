@@ -3,6 +3,6 @@
 -- (Fahrenheit) by city ordered by temperature (descending).
 
 SELECT city, AVG(value) AS avg_tmp
-FROM temp
+FROM temperatures
 GROUP BY city
 ORDER BY avg_tmp DESC;
