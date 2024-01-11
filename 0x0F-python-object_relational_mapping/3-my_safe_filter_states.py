@@ -12,7 +12,7 @@ if __name__ == "__main__":
     db=sys.argv[3], port=3306)
     cur = conn.cursor()
     match = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name LIKE '%s' ORDER BY states.id", (match, ))
+    cur.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
     rows = cur.fetchall()
     for row in rows:
         print(row)
